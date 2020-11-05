@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeRepeatStr(str){
+    var newStr = '';
+    var flag;
+    var len = str.length;
+    for(var i=0; i<len; i++){
+        flag = 1;
+        var newLen = newStr.length;
+        for(var j=0; j<newLen; j++){
+            if(str[i] == newStr[j]){
+                flag = 0;
+                break;
+            }
+        }
+        if(flag){
+            newStr = newStr + str[i];
+        }
+    }
+    return newStr; 
+}
+    var str='85872637471533203552943982'
+    var str= removeRepeatStr(str)
+    var num=str.split("");
+    for (var j = 0; j < num.length; j++) {
+            for (var i = 0; i < num.length; i++) {
+                if (num[i] > num[i + 1]) {
+                    var sem = num[i]
+                    num[i] = num[i + 1]
+                    num[i + 1] = sem
+                }
+            }
+        }
+        console.log(num);
+   
+   
+    </script>
+</body>
+</html>

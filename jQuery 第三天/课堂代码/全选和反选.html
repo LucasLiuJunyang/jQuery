@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li><label><input type="checkbox" value="1"> 张三</label></li>
+        <li><label><input type="checkbox" value="2"> 李四</label></li>
+        <li><label><input type="checkbox" value="3"> 麻子</label></li>
+    </ul>
+    <input type="checkbox" id="all">
+    <input type="button" value="全选" class="btn" id="selectAll">
+    <input type="button" value="反选" class="btn" id="reverse">
+    <script src="../3-code/jquery.min.js"></script>
+    <script>
+        $('#checkall').change(function () {
+            $('.checks').prop('checked', $("#checkall").prop('checked'))
+        });
+        $("#selectAll").click(function () {
+            $("#list :checkbox,#all").prop("checked", true);
+        });
+        $('.checks').change(function () {
+            console.log($('.checks:checked').length == $('.checks').length);
+            $('#checkall').prop('checked', $('.checks:checked').length == $('.checks').length)
+        });
+        $("#reverse").click(function () {
+            $("#list :checkbox").each(function () {
+                $(this).prop("checked", !$(this).prop("checked"));
+            });
+            allchk();
+        });
+    </script>
+</body>
+
+</html>

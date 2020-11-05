@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 400px;
+            background-color: #f0f;
+            display: none;
+        }
+    </style>
+
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <button>淡入</button>
+    <button>淡出</button>
+    <div></div>
+</body>
+<script>
+    $(function () {
+        $('button').eq(0).click(function () {
+            $('div').fadeIn(1000)
+        });
+        $('button').eq(0).click(function () {
+            $('div').fadeOut(1000)
+        })
+    })
+</script>
+
+</html>

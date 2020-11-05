@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>千军万马一将在，探囊取物有何难</li>
+        <li>千军万马一将在，探囊取物有何难</li>
+        <li>千军万马一将在，探囊取物有何难</li>
+        <li>千军万马一将在，探囊取物有何难</li>
+        <li>千军万马一将在，探囊取物有何难</li>
+    </ul>
+    <script src="jquery.min.js"></script>
+    <script>
+        jQuery(function () {
+            //高大上隔行变色
+            fn();
+
+            //鼠标进入高亮显示
+            $("ul li").mouseover(function () {
+                fn();
+                $(this).css("background", "red");
+            });
+
+
+
+
+            //隔行变色
+            function fn() {
+                $("ul li:odd").css("background", "skyblue");
+                $("ul li:even").css("background", "yellowgreen");
+            }
+        });
+    </script>
+</body>
+
+</html>
